@@ -37,7 +37,6 @@ namespace Woot
                 }
             }
 
-            // Per month
             foreach (var employeeItem in employees.Where(x => x.Key == "Kenny Eliasson"))
             {
                 var employee = employeeItem.Value;
@@ -124,30 +123,6 @@ namespace Woot
         }
     }
 
-    public interface IHour
-    {
-        bool Match(DateTime current);
-    }
-
-    public class QualifedHour : IHour
-    {
-        public bool Match(DateTime current)
-        {
-            if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday)
-            {
-                return true;
-            }
-    }
-
-    public class WorkHour
-    {
-
-    }
-
-    public class RegularHour
-    {
-
-    }
 
     public class DateRange
     {
