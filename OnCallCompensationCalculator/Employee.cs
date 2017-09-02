@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Ical.Net.Interfaces.DataTypes;
 using System.Linq;
+using System;
 
 namespace Woot
 {
@@ -14,9 +15,9 @@ namespace Woot
         public string Name { get; set; }
         public List<OnCallSession> Sessions { get; set; } = new List<OnCallSession>();
 
-        public void AddOnCall(IDateTime evStart, IDateTime evEnd)
+        public void AddOnCall(DateTime evStart, DateTime evEnd)
         {
-            Sessions.Add(new OnCallSession(evStart.AsSystemLocal, evEnd.AsSystemLocal));
+            Sessions.Add(new OnCallSession(evStart.ToLocalTime(), evEnd.ToLocalTime()));
         }
 
         public double TotalHours()

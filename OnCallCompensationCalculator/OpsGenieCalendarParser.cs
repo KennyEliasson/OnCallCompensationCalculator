@@ -32,7 +32,7 @@ namespace Woot
                         employees.Add(name, new Employee(name));
                     }
 
-                    employees[name].AddOnCall(ev.Start, ev.End);
+                    employees[name].AddOnCall(ev.Start.AsSystemLocal, ev.End.AsSystemLocal);
                 }
             }
 
