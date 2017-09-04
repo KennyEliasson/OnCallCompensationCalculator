@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SvenskaHögtider;
+using System;
 
 namespace Woot
 {
@@ -15,10 +16,23 @@ namespace Woot
         public int Regular { get; set; }
         public int Work { get; set; }
 
+
+        public static DateTime RoundToHours(DateTime input)
+        {
+            DateTime dt = new DateTime(input.Year, input.Month, input.Day, input.Hour, 0, 0);
+
+            if (input.Minute > 29)
+                return dt.AddHours(1);
+            else
+                return dt;
+        }
+
         public void DetermineOnCallType(DateTime current)
         {
-            // Lägg till stöd för röda dagar
-            if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday) {
+            // Avrunda till timme (ongoing timmar splittas i två delar, en som är "Past" och en future)
+            current = RoundToHours(current);
+
+            if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday || current.IsHoliday()) {
                 Qualified++;
             } else if (current.Hour >= 8 && current.Hour < 17) { //Arbetstid då det vi vet att det inte är lördag eller söndag
                 Work++;

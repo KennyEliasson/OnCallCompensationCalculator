@@ -53,6 +53,9 @@
     <Reference Include="NodaTime, Version=1.3.0.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
       <HintPath>..\packages\Ical.Net.2.3.2\lib\net46\NodaTime.dll</HintPath>
     </Reference>
+    <Reference Include="SvenskaHögtider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apoteksinfo.Holidays.1.0.1\lib\net45\SvenskaHögtider.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
