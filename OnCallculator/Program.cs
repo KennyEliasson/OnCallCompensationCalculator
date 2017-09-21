@@ -1,16 +1,13 @@
 ﻿using System;
 
-namespace Woot
+namespace OnCallculator
 {
     class Program
     {
         static void Main(string[] args)
         {
             var employees = new OpsGenieApiTimeline().Request().Result;
-
-
             
-
          //   var employees = new OpsGenieCalendarParser().Parse(@"C:\temp\Woot\OnCallCompensationCalculator\OnCallCompensationCalculator\Instore_Europe_schedule.ics");
 
             foreach (var employeeItem in employees)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Ical.Net;
 
-namespace Woot
+namespace OnCallculator
 {
     public class OpsGenieCalendarParser
     {

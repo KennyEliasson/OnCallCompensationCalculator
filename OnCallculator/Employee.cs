@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Ical.Net.Interfaces.DataTypes;
 using System.Linq;
 using System;
 
-namespace Woot
+namespace OnCallculator
 {
     public class Employee
     {

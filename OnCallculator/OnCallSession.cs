@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Woot
+namespace OnCallculator
 {
     public class OnCallSession
     {

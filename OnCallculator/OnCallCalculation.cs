@@ -1,7 +1,7 @@
 ﻿using SvenskaHögtider;
 using System;
 
-namespace Woot
+namespace OnCallculator
 {
     public class OnCallCalculation
     {
@@ -31,7 +31,7 @@ namespace Woot
         {
             // Avrunda till timme (ongoing timmar splittas i två delar, en som är "Past" och en future)
             current = RoundToHours(current);
-
+            
             if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday || current.IsHoliday()) {
                 Qualified++;
             } else if (current.Hour >= 8 && current.Hour < 17) { //Arbetstid då det vi vet att det inte är lördag eller söndag
