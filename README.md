@@ -1,2 +1,6 @@
-# OnCallCompensationCalculator
-Calculate on call compensation from a .ics file from f.ex. OpsGenie for Swedish employees
+# OnCallculator
+Can calculate on-call compensation for Swedish Employees
+
+Support for 
+* .ics-files
+* OpsGenie API
