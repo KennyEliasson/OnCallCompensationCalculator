@@ -15,7 +15,7 @@ namespace OnCallculator
         internal async Task<Dictionary<string, Employee>> Request()
         {
             var response = await "https://api.opsgenie.com/v2/schedules/Instore Europe_schedule/timeline?identifierType=name&intervalUnit=months&interval=12&date=2017-11-01T08:00:00%2B02:00"
-                .WithHeader("Authorization", "GenieKey edeac555-1370-4f90-95ce-6e5a1cf7e454")
+                .WithHeader("Authorization", "<KEY>")
                 .GetJsonAsync<TimelineResponse>();
 
             var employees = new Dictionary<string, Employee>();
